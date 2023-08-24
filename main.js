@@ -83,9 +83,9 @@ form.addEventListener("submit", async (e) => {
         const serverResponse = await sendFormData(formData);
         formStatusParaEl.textContent = serverResponse.message;
         e.target.reset();
+        submitBtn.textContent = "Submit";
         await delay();
         formStatusParaEl.textContent = "";
-        submitBtn.textContent = "Submit";
     } catch (error) {
         console.log(error);
     } finally {
