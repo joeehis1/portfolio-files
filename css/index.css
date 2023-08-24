@@ -380,6 +380,7 @@ header .grid {
   color: #F2F4CB;
   padding: 0.4rem;
   border: none;
+  width: 100%;
 }
 .contact-form textarea {
   resize: none;
