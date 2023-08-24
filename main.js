@@ -59,6 +59,7 @@ form.addEventListener("submit", async (e) => {
         formStatusParaEl.textContent = "Please enter your name";
         const nameInput = form.querySelector('input[name="name"]');
         nameInput.focus();
+        submitBtn.disabled = false;
         return;
     }
     const emailRegEx = /[\w.]+@\w+\.(com|net|org|ca)/;
@@ -67,12 +68,14 @@ form.addEventListener("submit", async (e) => {
         formStatusParaEl.textContent = "Please enter valid email";
         const emailInput = form.querySelector('input[name="email"]');
         emailInput.focus();
+        submitBtn.disabled = false;
         return;
     }
     if (message.length <= 0) {
         formStatusParaEl.textContent = "Please write a message";
         const textArea = form.querySelector("textarea");
         textArea.focus();
+        submitBtn.disabled = false;
         return;
     }
     submitBtn.textContent = "Sending...";
@@ -85,6 +88,8 @@ form.addEventListener("submit", async (e) => {
         submitBtn.textContent = "Submit";
     } catch (error) {
         console.log(error);
+    } finally {
+        submitBtn.textContent = "Submit";
     }
 });
 
