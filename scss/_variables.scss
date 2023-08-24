@@ -1,0 +1,45 @@
+$dark: #110b11;
+$dark-trans: #110b11d3;
+$light: #F2F4CB;
+$bg-dark: $dark;
+// $section-bg-color: $bg-dark;
+$text-primary: $light;
+$accent-color: #B7990D;
+
+//Text
+
+$largest: clamp(2.8rem, 3.75rem, 4.7rem);
+$large: clamp(1.875rem, 2.5rem, 3.4rem);
+$med: clamp(0.9rem, 1.125rem, 1.375rem);
+$small: clamp(0.775rem, 1.025rem, 1.275rem);
+
+
+
+//mixin
+@mixin reset-list(){
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+@mixin pseudo-link($top, $bgColor:$accent-color ){
+    content: "";
+        display: block;
+        position: absolute;
+        top: $top;
+        left: 0;
+        right: 100%;
+        opacity: 0;
+        bottom: 0;
+        background-color: $bgColor;
+        transition: opacity 350ms ease,
+            right 350ms ease,
+            top 350ms ease;
+}
+
+@mixin pseudo-link-hovered($top){
+    top: $top;
+    opacity: 1;
+    right: 0
+}

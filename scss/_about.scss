@@ -1,0 +1,48 @@
+@use './variables' as *;
+
+// .about-me{
+//     // background-color: $dark-trans;
+// }
+
+.article-section{
+    padding-block: 3rem;
+    text-align: center
+}
+
+.journey-list{
+    @include reset-list;
+}
+
+.contact-form{
+    border: 1px solid;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1.6rem;
+
+    label{
+        display: grid;
+        text-align: left;
+        gap: 0.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    input, textarea{
+        background-color: $dark-trans;
+        color: $text-primary;
+        padding: 0.4rem;
+        border: none;
+    }
+
+    textarea{
+        resize: none;
+    }
+
+    .btn-form:disabled{
+        cursor: not-allowed;
+        color: grey;
+        &:after{
+            position: static;
+
+        }
+    }
+}

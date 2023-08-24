@@ -1,0 +1,49 @@
+@use './variables' as *;
+footer{
+    background-color: $dark-trans;
+    text-align: center;
+    padding-block: 3rem;
+    p{
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.contacts{
+    padding-block:0.8rem;
+}
+
+.socials-list{
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    @include reset-list;
+    padding-bottom: 1.6rem;
+}
+
+.social-link{
+    display: inline-block;
+    padding: 0.8rem;
+    transform: translateY(0px);
+    transition: transform 350ms ease, color 350ms ease;
+    text-decoration: none;
+    &:hover{
+        transform: translateY(-3px);
+        color: $accent-color;
+    }
+}
+
+.contact-info{
+    @include reset-list;
+    li{
+        margin-bottom: 0.4rem;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+.attribution{
+    border-top: 1px solid;
+}

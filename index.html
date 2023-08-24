@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dev Portfolio-Joseph</title>
+        <link rel="shortcut icon" href="./icon/code.png" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./css/index.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container grid">
+                <a href="#">
+                    <img
+                        class="icon-image"
+                        src="./img/dev-jane-01.jpg"
+                        alt=""
+                    />
+                </a>
+                <button
+                    id="nav-btn"
+                    aria-label="Toggle navigation"
+                    class="nav-toggle-btn"
+                    data-menu-hidden=""
+                >
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+                <nav id="main-nav" class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact me</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi there <span>I am Joseph Ehigiator</span>
+                    </h1>
+                    <p>A Web Developer based in Ontario, Canada</p>
+                    <a
+                        href="#contact"
+                        class="btn-link btn-link-hover-effect-wide"
+                        >Get in touch</a
+                    >
+                </div>
+            </div>
+            <!--  -->
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <ul class="projects-list">
+                    <li class="project">
+                        <figure class="project-image">
+                            <a
+                                href="https://hilarious-cheesecake-7711e7.netlify.app/"
+                                target="_blank"
+                                ><img
+                                    src="./images/color-scheme-gen.png"
+                                    alt="A screenshot showing the active state of a color scheme generator"
+                            /></a>
+                            <figcaption>Color Scheme Generator</figcaption>
+                        </figure>
+                        <div class="project-desc">
+                            <p>
+                                This is a color scheme generator built using
+                                vanilla javascript. It gets its data from
+                                <a
+                                    href="https://www.thecolorapi.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >the color API.</a
+                                >
+                                It has a custom built select menu. A typical
+                                user has the ability to select a color, define a
+                                color scheme and generate a scheme to be used
+                                for their particular needs.
+                            </p>
+                            <a
+                                href="https://github.com/joeehis1/Color-scheme-generator"
+                                target="_blank"
+                                class="btn btn-link btn-link-hover-effect-thin"
+                                >View Code Repository
+                                <i class="fa-brands fa-github"></i
+                            ></a>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <figure class="project-image">
+                            <!-- This will be a link to the deployed page -->
+                            <a
+                                href="https://eloquent-baklava-0ca6fb.netlify.app/"
+                                target="_blank"
+                            >
+                                <img
+                                    src="./images/password-gen.png"
+                                    alt="A screenshot showing the active state of a password generator"
+                                    width="560"
+                                />
+                            </a>
+                            <figcaption>Password Generator</figcaption>
+                        </figure>
+                        <div class="project-desc">
+                            <p>
+                                This is a password generator built using html,
+                                css and vanilla javascript. A typical user has
+                                the ability to select their desired password
+                                length and the type of characters to use in
+                                their password. One the password has being
+                                created they are able to click on an icon to
+                                copy generated password
+                            </p>
+                            <a
+                                href="https://github.com/joeehis1/password-generator"
+                                target="_blank"
+                                class="btn btn-link btn-link-hover-effect-thin"
+                                >View Code Repository
+                                <i class="fa-brands fa-github"></i
+                            ></a>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <figure class="project-image">
+                            <a
+                                href="https://spectacular-froyo-fdbba9.netlify.app"
+                                target="_blank"
+                            >
+                                <img
+                                    src="./images/Personal Dashboard.png"
+                                    alt="A screenshot showing the initial state of a dashboard application"
+                                    width="560"
+                                />
+                            </a>
+                            <figcaption>Personal Dashboard</figcaption>
+                        </figure>
+                        <div class="project-desc">
+                            <p>
+                                This is a dashboard intended for possible future
+                                use as a chrome extension. It has a currency
+                                exchanger, a weather app with the ability to
+                                show and hide the weather forecast, a random
+                                quote generator. a clock that is also pomodoro
+                                timer and a to-do list manager. The frontend was
+                                built using react. It has a backend that is
+                                responsible for making the calls to the various
+                                API's and caching the data to limit the number
+                                of actual API calls that need to be made. The
+                                backend was built using node.js and express.js.
+                            </p>
+                            <p>
+                                Caveat: Due to constraints involved with
+                                deploying a backend using the free tier of
+                                render.com, bear in mind that at certain points
+                                in time the app might not work as it is supposed
+                                to. This is because, I need to manually restart
+                                the server a few times during the day.
+                            </p>
+                            <a
+                                href="https://github.com/joeehis1/dashboard-frontend"
+                                target="_blank"
+                                class="btn-link btn-link-hover-effect-thin"
+                                >View Code Repository
+                                <i class="fa-brands fa-github"></i
+                            ></a>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <figure class="project-image">
+                            <a
+                                href="https://relaxed-starburst-7ce14d.netlify.app/"
+                                target="_blank"
+                            >
+                                <img
+                                    src="./images/Quiz app.png"
+                                    alt="A screenshot showing the initial state of a quiz application"
+                                    width="560"
+                                />
+                            </a>
+                            <figcaption>Quiz Application</figcaption>
+                        </figure>
+                        <div class="project-desc">
+                            <p>
+                                This is a quiz application built using react.
+                                The data for the quiz is obtained from
+                                <a href="https://opentdb.com/" target="_blank"
+                                    >the open trivia database</a
+                                >. A typical user is able to select their
+                                desired difficulty level and the category of
+                                questions that they'd like to answer. After
+                                completing the quiz which consists of five
+                                questions, they're able to see their scores and
+                                they have the option to reset the quiz and pick
+                                another category of questions.
+                            </p>
+                            <a
+                                href="https://github.com/joeehis1/Quizzical"
+                                target="_blank"
+                                class="btn-link btn-link-hover-effect-thin"
+                                >View Code Repository
+                                <i class="fa-brands fa-github"></i
+                            ></a>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <figure class="project-image">
+                            <a
+                                href="https://heroic-profiterole-f951b8.netlify.app/"
+                                target="_blank"
+                                rel="noopener"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    src="./images/Screenshot 2023-08-09 at 09-12-15 Unit Converter.png"
+                                    alt="A screenshot showing the active state of a unit converter"
+                                    width="560"
+                                />
+                            </a>
+                            <figcaption>Unit Converter</figcaption>
+                        </figure>
+                        <div class="project-desc">
+                            <p>
+                                This is unit converter built using html, css and
+                                javascript. A typical user would be able to get
+                                a unit conversion for mass, length and volume in
+                                both metric and imperial units by entering a
+                                number into the input field.
+                            </p>
+                            <a
+                                href="https://github.com/joeehis1/unit_converter"
+                                target="_blank"
+                                class="btn-link btn-link-hover-effect-thin"
+                                >View Code Repository
+                                <i class="fa-brands fa-github"></i
+                            ></a>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <figure class="project-image">
+                            <a
+                                href="https://quiet-sopapillas-e4cbaf.netlify.app/"
+                                target="_blank"
+                                ><img
+                                    src="./images/Tenzies.png"
+                                    alt="A screenshot showing the final state of the application"
+                                    width="560"
+                            /></a>
+                            <figcaption>Tenzies Game</figcaption>
+                        </figure>
+                        <div class="project-desc">
+                            <p>
+                                This is a minimal app build of the tenzies game.
+                                In this build, a player would typically attempt
+                                to get the same number showing on every dice
+                                roll. Each "roll" of the dice generates a random
+                                number on each die face. As soon as every die
+                                face is the same, the timer stops running. Each
+                                time a user resets the game, the timer starts
+                                back up and the user's times for each game
+                                session is displayed on a table that can be
+                                displayed or hidden.
+                            </p>
+                            <a
+                                href="https://github.com/joeehis1/tenzies-project"
+                                target="_blank"
+                                class="btn-link btn-link-hover-effect-thin"
+                                >View Code Repository
+                                <i class="fa-brands fa-github"></i
+                            ></a>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <figure class="project-image">
+                            <a
+                                href="https://incomparable-sable-5ad6b9.netlify.app/"
+                                target="_blank"
+                            >
+                                <img
+                                    src="./images/watchlist-app.png"
+                                    alt="A screenshot showing the initial state of the application"
+                                    width="560"
+                                />
+                            </a>
+                            <figcaption>Movie watchlist</figcaption>
+                        </figure>
+                        <div class="project-desc">
+                            <p>
+                                The watchlist application was built using html,
+                                css and vanilla javascript. A typical user would
+                                search for a movie they intended on watching.
+                                The input string would be used in making a call
+                                to
+                                <a
+                                    href="https://www.omdbapi.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >the open movie database API</a
+                                >
+                                to retrieve all movies related to that
+                                particular search string. Each result can be
+                                saved and viewed later since all searches are
+                                saved to local storage
+                            </p>
+                            <a
+                                href="https://github.com/joeehis1/movie-watchlist"
+                                target="_blank"
+                                class="btn-link btn-link-hover-effect-thin"
+                                >View Code Repository
+                                <i class="fa-brands fa-github"></i
+                            ></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <article class="about-me" id="about">
+            <div class="container">
+                <section class="article-section">
+                    <h2 class="section-title">Who I Am</h2>
+                    <p>
+                        I am a self taught web developer with a strong
+                        foundation in both front-end and back-end technologies.
+                        My passion and determination are my main drivers for
+                        learning and creation of amazing things. The journey
+                        started for me officially in March 2022, although I did
+                        play around with dreamweaver, flash and actionscript
+                        when these tools were still popular a long time ago.
+                    </p>
+                </section>
+                <section class="article-section">
+                    <h2 class="section-title">The journey so far</h2>
+                    <ul class="journey-list">
+                        <li>
+                            <h3>Crafting web magic</h3>
+                            <p>
+                                My journey started with HTML, where I discovered
+                                the building blocks of every web page. I quickly
+                                moved on to CSS and learned to leverage
+                                SCSS/SASS to bring my designs to life, make
+                                websites visually appealing and stylish, and
+                                keep my code base manageable. My constantly
+                                evolving knowledge of Javascript, React and
+                                tools in the react ecosystem enables me to add
+                                interactive and dynamic features to engage
+                                users.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Back-end Adventures</h3>
+                            <p>
+                                My skills extend beyond just front-end! I know
+                                how to use express.js to set up fully functional
+                                web servers and I'm exploring other parts of the
+                                node.js ecosystem. Understanding server-side
+                                logic and APIs has opened up a world of
+                                possibilities for me and I hope to dive deeper
+                                as time goes by.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>The Joy of Full Stack</h3>
+                            <p>
+                                I'm fascinated by the seamless connection
+                                between the front and back end in full stack
+                                development. Integrating everything i've learned
+                                into complete web applications is my current
+                                adventure. From simple user interfaces to
+                                complex interactions, I'm eager to experiment
+                                and create.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Always Learning</h3>
+                            <p>
+                                Learning is at the heart of my journey. From
+                                refreshing my knowldge of foundational concepts
+                                to exploring new libraries and tools, I am
+                                always excited to keep myself up to date with
+                                the ever evolving landscape.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Problem-solving Enthusiat</h3>
+                            <p>
+                                Challenges are opportunities for growth, I
+                                embrace each coding challenge as a chance to
+                                learn and improve. Debugging and finding
+                                solutions is tough, but the sense of
+                                accomplishment is worth it every time
+                            </p>
+                        </li>
+                        <!-- <li>
+                            <h3>When I'm not coding</h3>
+                            <p>
+                                I have a life outside of programming(which is really
+                                about 2-3hrs...lol) and when I'm not coding, I'm
+                                either at the gym, reading a novel or playing a
+                                game. (By the way if you are a fan of tekken7, my
+                                psnid is "katsura_3188").
+                            </p>
+                        </li> -->
+                    </ul>
+                    <a href="#" class="btn-link btn-link-hover-effect-thin"
+                        >Linkedin Resume</a
+                    >
+                </section>
+                <section class="article-section" id="contact">
+                    <h2 class="section-title">Contact me</h2>
+                    <p>
+                        Are you looking for an enthusiastic web developer with
+                        the drive and enthusiasm required to get the job done
+                        properly? Look no further. Or maybe you'd just like to
+                        meet up and exchange ideas.
+                    </p>
+
+                    <form id="contact-form" class="contact-form">
+                        <p id="sent-status" class="sent-status"></p>
+                        <label>
+                            Name:
+                            <input type="text" name="name" />
+                        </label>
+                        <label>
+                            Email:
+                            <input type="email" name="email" required />
+                        </label>
+                        <label>
+                            Message
+                            <textarea
+                                name="message"
+                                id=""
+                                cols="30"
+                                rows="10"
+                                required
+                            ></textarea>
+                        </label>
+                        <button
+                            disabled
+                            class="btn-link btn-link-hover-effect-wide btn-form"
+                        >
+                            Submit
+                        </button>
+                    </form>
+                    <!-- Use dialog for form elements here -->
+                </section>
+            </div>
+        </article>
+
+        <footer>
+            <!-- Footer should take dark background color -->
+            <!--  -->
+
+            <div class="container">
+                <section class="contacts">
+                    <ul class="socials-list">
+                        <li>
+                            <a
+                                class="social-link"
+                                target="_blank"
+                                href="https://github.com/joeehis1"
+                                >Github</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="social-link"
+                                target="_blank"
+                                href="https://www.linkedin.com/in/joseph-ehigiator-m-sc-pmp%C2%AE-8aa58b34/"
+                                >Linkedin</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="social-link"
+                                target="_blank"
+                                href="https://codepen.io/joe_starr_ehi1"
+                                >Codepen</a
+                            >
+                        </li>
+                    </ul>
+                    <ul class="contact-info">
+                        <li>
+                            <a href="mailto:joeehis1@gmail.com"
+                                >Email: joeehis1@gmail.com</a
+                            >
+                        </li>
+                        <li>
+                            <a href="tel:+16477859570"
+                                >Tel: +1 (647) 785-9570</a
+                            >
+                        </li>
+                    </ul>
+                </section>
+                <section class="attribution">
+                    <p>
+                        Photo(i.e background image) by
+                        <a
+                            href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                            >Markus Spiske</a
+                        >
+                        on
+                        <a
+                            href="https://unsplash.com/photos/iar-afB0QQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                            >Unsplash</a
+                        >
+                    </p>
+                    <p>
+                        Favicon by
+                        <a
+                            target="_blank"
+                            href="https://icons8.com/icon/lL6HOeUhTyfg/source-code"
+                            rel="noopener noreferrer"
+                            >Code</a
+                        >
+                        icon by
+                        <a target="_blank" href="https://icons8.com">Icons8</a>
+                    </p>
+                </section>
+            </div>
+        </footer>
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>

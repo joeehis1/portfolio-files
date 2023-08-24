@@ -1,0 +1,18 @@
+@use './variables' as *;
+
+.hero-section{
+    // min-height: 100vh;
+    // text-align: center;
+    padding-block: 8rem;
+}
+
+.hero-text{
+    text-align: center;
+}
+
+.hero-title{
+    span{
+        display: block;
+    }
+}
+

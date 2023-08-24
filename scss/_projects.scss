@@ -1,0 +1,42 @@
+@use './variables' as *;
+
+.projects{
+    // border: 2px solid;
+    padding-block: 3rem;
+    background-color: $dark-trans;
+}
+
+
+
+.projects-list{
+    @include reset-list
+}
+
+.project{
+    margin-bottom: 6.4rem;
+    text-align: center;
+    @media (min-width: 600px) {
+        display: grid;
+        grid-template-columns: 0.6fr 0.4fr;
+        gap: 0.6rem;
+        
+    }
+    
+}
+
+.project-desc{
+    @media (min-width: 600px) {
+        align-self: center;
+        text-align: right;
+    }
+}
+
+.project-image{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    img {
+        margin-top: 1.6rem;
+    }
+}
+

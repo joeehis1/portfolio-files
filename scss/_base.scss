@@ -1,0 +1,146 @@
+@use './variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    background-color: $dark;
+    color: $text-primary;
+    line-height: 1.4;
+    background-image: url('../images/bg-img.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+    font-family: 'Jost', sans-serif;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.icon-image {
+    width: 20.2rem;
+}
+
+a{
+    color: inherit
+}
+
+h1, h2, h3, h4{
+    margin-top: 0;
+}
+
+p{
+    font-weight: 300;
+    
+}
+
+h1{
+    font-size: $largest;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+
+h2, figcaption{
+    font-size: $large //use for intro text as well
+    
+}
+
+h2, h3, figcaption{
+    font-weight: 400;
+}
+
+a, p, ul{
+    font-size: $small;
+    font-weight: 300;
+}
+
+h4{
+    font-size: $med;
+    font-weight: 500;
+}
+
+figure{
+    margin: 0;
+}
+
+.container {
+    width: 92%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.btn{
+    border: 1px solid;
+    display: inline-block;
+    // padding-block: ;
+}
+
+
+
+.btn-link {
+    border: 1px solid $light;
+    background-color: transparent;
+    color: $light;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.8rem;
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+
+}
+.section-title {
+    text-align: center;
+
+    &::after {
+        content: "";
+        display: block;
+        background-color: $accent-color;
+        padding: 0.2rem;
+        width: 3rem;
+        margin: auto;
+    }
+}
+
+.btn-link-hover-effect-wide {
+    transition: color 350ms ease;
+
+    &::after {
+        @include pseudo-link(0);
+        z-index: -2;
+    }
+
+    &:hover {
+        color: $dark;
+
+        &::after {
+            @include pseudo-link-hovered(0)
+        }
+    }
+}
+
+.btn-link-hover-effect-thin {
+    position: relative;
+
+    &::after {
+        @include pseudo-link(0);
+    }
+
+    &:hover {
+        &::after {
+            @include pseudo-link-hovered(82%)
+        }
+    }
+}

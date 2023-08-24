@@ -1,0 +1,149 @@
+@use './variables' as *;
+
+
+header{
+    padding-block: 0.8rem;
+    .grid{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.icon-image{
+    border-radius: 50%;
+    width: 6rem;
+    aspect-ratio: 1;
+}
+
+.nav-toggle-btn {
+    padding: 0.4rem;
+    position: fixed;
+    border: none;
+    right: 5%;
+    z-index: 14;
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 1px $accent-color;
+    .line{
+        height: 0.3rem;
+        width: 1.4rem;
+        background-color: black;
+        margin-bottom: 0.2rem;
+        transition: transform 350ms ease, opacity 350ms ease;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+    &[data-menu-hidden]{
+        .line:first-of-type {
+            transform: rotateZ(0deg) translateY(0) translateX(0);
+        }
+    
+        .line:nth-of-type(2) {
+            opacity: 1
+        }
+    
+        .line:nth-of-type(3) {
+            transform: rotateZ(0) translateY(0) translateX(0)
+        }
+    }
+    &[data-menu-shown]{
+        .line{
+            background-color: $accent-color;
+        }
+        .line:first-of-type{
+            transform: rotateZ(45deg) translateY(6px) translateX(6px);
+        }
+        .line:nth-of-type(2) {
+            opacity: 0;
+        }
+        .line:nth-of-type(3) {
+            transform: rotateZ(-45deg) translateY(-6px) translateX(5px)
+        }
+    }
+    &:hover{
+        background-color: $dark;
+        .line{
+            background-color: $accent-color;
+        }
+    }
+    @media (min-width: 600px) {
+        display: none;
+    }
+}
+
+.main-nav{
+    
+    background-color: $bg-dark;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    z-index: 12;
+    transition: clip-path 350ms ease, opacity 350ms ease;
+    clip-path: circle(9.8% at 100% 0);
+    opacity: 0;
+    pointer-events: none;
+
+    &[data-menu-shown]{
+        clip-path: circle(141.2% at 100% 0);
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    @media (min-width: 600px) {
+        // To reset position of nav menu back to static at larger screen sizes
+        position: static;
+        display: block;
+        pointer-events: all;
+        opacity: 1;
+        background-color: transparent;
+        min-height: initial;
+        text-align: initial;
+        clip-path: none;
+    }
+
+    .nav-list {
+        @include reset-list;
+        @media (min-width: 600px) {
+            display: flex;
+            gap: 1.6rem;
+        }
+    }
+
+    .nav-item{
+        margin-bottom: 0.8rem;
+        display: flex;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        @media (min-width: 600px) {
+            margin-bottom: 0;
+            padding-block: 0.8rem;
+        }
+    }
+
+    .nav-link{
+        font-size: $large;
+        text-decoration: none;
+        position: relative;
+        width: 100%;
+        &::after{
+            @include pseudo-link(57%)
+        }
+        &:hover{
+            &::after{
+                @include pseudo-link-hovered(80%)
+            }
+        }
+        @media (min-width: 600px) {
+            //Reset font size to the regular font size at large screen sizes
+            font-size: $med;
+        }
+    }
+
+}
+
