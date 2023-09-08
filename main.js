@@ -89,7 +89,6 @@ form.addEventListener("submit", async (e) => {
         const serverResponse = await sendFormData(formData);
         formStatusParaEl.textContent = serverResponse.message;
         e.target.reset();
-        formStatusParaEl.textContent = "";
     } catch (error) {
         console.log(error);
     } finally {
