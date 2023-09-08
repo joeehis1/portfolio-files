@@ -50,14 +50,16 @@ textArea.addEventListener("input", (e) => {
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
+    const nameInput = form.querySelector('input[name="name"]');
+    const emailInput = form.querySelector('input[name="email"]');
+    const textArea = form.querySelector("textarea");
     submitBtn.disabled = true;
 
     const formData = Object.fromEntries(new FormData(e.target));
     const { name, email, message } = formData;
     if (!name.trim() || name.length <= 0) {
         formStatusParaEl.textContent = "Please enter your name";
-        const nameInput = form.querySelector('input[name="name"]');
+
         nameInput.focus();
         submitBtn.disabled = false;
         return;
@@ -66,38 +68,37 @@ form.addEventListener("submit", async (e) => {
     const validEmail = emailRegEx.test(email);
     if (!validEmail) {
         formStatusParaEl.textContent = "Please enter valid email";
-        const emailInput = form.querySelector('input[name="email"]');
+
         emailInput.focus();
         submitBtn.disabled = false;
         return;
     }
     if (message.length <= 0) {
         formStatusParaEl.textContent = "Please write a message";
-        const textArea = form.querySelector("textarea");
+
         textArea.focus();
         submitBtn.disabled = false;
         return;
     }
     submitBtn.textContent = "Sending...";
+    nameInput.disabled = true;
+    emailInput.disabled = true;
+    textArea.disabled = true;
+
     try {
         const serverResponse = await sendFormData(formData);
         formStatusParaEl.textContent = serverResponse.message;
         e.target.reset();
-        submitBtn.textContent = "Submit";
-        await delay();
         formStatusParaEl.textContent = "";
     } catch (error) {
         console.log(error);
     } finally {
         submitBtn.textContent = "Submit";
+        nameInput.disabled = false;
+        emailInput.disabled = false;
+        textArea.disabled = false;
     }
 });
-
-async function delay(ms = 4000) {
-    return new Promise((res, rej) => {
-        setInterval(res, ms);
-    });
-}
 
 async function sendFormData(formData) {
     const url = "https://portfolio-server-wutu.onrender.com/";
